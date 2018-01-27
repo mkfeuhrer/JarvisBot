@@ -1,0 +1,15 @@
+QUICK_HELP = 'Enter `@timepass help` for help on using the timepass.'
+
+HELP_MESSAGE = ('Timepass usage:\n'
+                '`@timepass movies all <movie-name>`\n'
+                'Complete Information of the movie\n'
+                '`@timepass movies summary <movie-name>`\n'
+                'Finds Summary of the movie\n'
+                '`@timepass movies actors <movie-name>`\n'
+                'Finds Actors/Actress in the movie\n'
+                '`@timepass movies rating <movie-name>`\n'
+                'Finds Rating of the movie\n'
+                'Usage examples:\n'
+                '* `@timepass movies all Titanic`\n'
+                '* `@timepass movies summary Titanic`\n'
+                '* `@timepass movies actors Titanic`\n')
