@@ -2,7 +2,7 @@ from typing import Any, Dict
 from imdbpie import Imdb
 import lyricwikia
 from weather import Weather
-from zulip_bots.bots.TimePass import utils, sps, mindGame, hangman
+from zulip_bots.bots.TimePass import utils, sps, mindGame, hangman, scrabble
 import os
 
 
@@ -52,6 +52,8 @@ class TimePass(object):
         	results.append(mindGame.get_mindGame_response(message,bot_handler))
         elif query == "hangman":
         	results.append(hangman.get_response(message,bot_handler))
+        elif query == "scrabble":
+        	results.append(scrabble.get_response(message,bot_handler))
         else:
         	results.append(utils.QUICK_HELP) 
 
