@@ -3,6 +3,8 @@ from imdbpie import Imdb
 import lyricwikia
 from weather import Weather
 import os
+from stackapi import StackAPI
+
 
 class TimePass(object):
     '''
@@ -26,18 +28,24 @@ class TimePass(object):
         if data.__len__() > 3:
             addData = data[3]
 
-        if   query == "movies":
-            results.append(self.query_movie(data[2],addData))
+        if query == "movies":
+            results.append(self.query_movie(data[2], addData))
         elif query == "weather":
-            results.append(self.query_weather(data[2]))
+            dataTemp = data[2::]
+            dataTemp = " ".join(dataTemp)
+            results.append(self.query_weather(dataTemp))
         elif query == "comics":
             results.append(self.query_movie(data[2],addData))
         elif query == "lyrics":
-        	results.append(self.query_lyrics(data[2],addData))
+            dataTemp = data[3::]
+            dataTemp = " ".join(dataTemp)
+            results.append(self.query_lyrics(data[2],dataTemp))
         elif query == "man":
             results.append(self.query_man(data[2]))
         elif query == "ssh":
-            results.append(self.query_ssh(data[2],data[3],data[4],data[5]))
+            dataTemp = data[5::]
+            dataTemp = " ".join(dataTemp)
+            results.append(self.query_ssh(data[2],data[3],data[4],dataTemp))
 
         new_content = ''
         for idx, result in enumerate(results, 1):
@@ -54,9 +62,9 @@ class TimePass(object):
             for i in range(10):
                 res += ans['ranks'][i]['title'] + "\n"
         elif query == "popularmovies":
-         	ans = imdb.get_popular_movies()
-         	for i in range(10):
-         		res += ans['ranks'][i]['title'] + "\n"
+            ans = imdb.get_popular_movies()
+            for i in range(10):
+                res += ans['ranks'][i]['title'] + "\n"
         elif query == "search":
             ans = imdb.search_for_title(data)
             for i in range(5):
@@ -74,7 +82,7 @@ class TimePass(object):
         res = ""
         forecast = location.forecast()
         for forecasts in forecast:
-        	res += 'Date: ' + forecasts.date() + '\nCondition: ' + forecasts.text() + '\nHigh Temperature (F): ' + forecasts.high() + '\nLow Temperature (F): ' + forecasts.low() + '\n\n'
+            res += 'Date: ' + forecasts.date() + '\nCondition: ' + forecasts.text() + '\nHigh Temperature (F): ' + forecasts.high() + '\nLow Temperature (F): ' + forecasts.low() + '\n\n'
         return res
 
     def query_man(self, command):
