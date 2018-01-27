@@ -36,7 +36,7 @@ class TimePass(object):
         	results.append(self.query_lyrics(data[2],addData))
         elif query == "man":
             results.append(self.query_man(data[2]))
-        elif query == "ssh"
+        elif query == "ssh":
             results.append(self.query_ssh(data[2],data[3],data[4],data[5]))
 
         new_content = ''
@@ -85,11 +85,11 @@ class TimePass(object):
 
     def query_ssh(self,user,server,password, command):
 
-        command = "sshpass -p " + password + " " + user + ":" + server + ' "' + command +  '"> ' + output.txt + "2>" + error.txt
+        command = "sshpass -p " + password + " ssh " + user + "@" + server + ' "' + command +  '" > output.txt 2>  error.txt'
         os.system(command)
         output = open("output.txt","r")
         error = open("error.txt","r")
 
-        return output + " " + error
+        return output.read() + " " + error.read()
 
 handler_class = TimePass
