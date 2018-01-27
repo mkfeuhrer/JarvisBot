@@ -2,7 +2,7 @@ from typing import Any, Dict
 from imdbpie import Imdb
 import lyricwikia
 from weather import Weather
-from zulip_bots.bots.TimePass import utils, sps, mindGame, hangman, scrabble, todo, calculator
+from zulip_bots.bots.TimePass import utils, sps, mindGame, hangman, scrabble, todo, calculator, news
 import os
 
 
@@ -12,7 +12,7 @@ class TimePass(object):
     '''
 
     def usage(self):
-        return '''Your description of the bot'''
+        return '''Build with python and Zulip chat api, Jarvis Bot is the most feature rich unofficial Zulip chat bot that is 100% free and open source.'''
 
     def handle_message(self, message: Dict[str, str], bot_handler: Any) -> None:
         results = []
@@ -58,6 +58,8 @@ class TimePass(object):
         	results.append(todo.get_todo_response(message,bot_handler))
         elif query == "calculator":
             results.append(calculator.get_calculator_response(message,bot_handler))
+        elif query == "news":
+            results.append(news.get_news_response(message,bot_handler))
         else:
         	results.append(utils.QUICK_HELP) 
 

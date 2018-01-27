@@ -27,7 +27,7 @@ def get_response(message, bot_handler):
 
 			bot_handler.storage.put("his_points", "0")
 			bot_handler.storage.put("bot_points", "0")
-			board = [['*' for i in range(9)] for j in range(9)]
+			board = [['#' for i in range(9)] for j in range(9)]
 			board_str = show_board(board)
 			bot_handler.storage.put("board", board_str)
 			bot_handler.storage.put("game_on", "true")
@@ -131,7 +131,7 @@ def valid_move(row, col, c):
 
 		return False
 
-	if (c <= '0' or c >= 'z') and board[row][col] == '*':
+	if (c <= '0' or c >= 'z') and board[row][col] == '#':
 
 		return False
 
@@ -152,7 +152,7 @@ def get_board(board_str):
 
 # parse board to string
 def show_board(board):
-	ret = "  "
+	ret = "0 "
 
 	for i in range(9):
 
@@ -183,7 +183,7 @@ def game_result(board, his_points, bot_points):
 	for i in range(9):
 		for j in range(9):
 
-			if board[i][j] == '*':
+			if board[i][j] == '#':
 
 				return ""
 

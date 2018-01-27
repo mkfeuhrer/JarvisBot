@@ -4,30 +4,19 @@ from string import ascii_lowercase
 import enchant
 D = enchant.Dict("en_US")
 
-def easy_bot(board):
-	list = []
-	for i in range(9):
-		for j in range(9):
-			if board[i][j] == '*':
-				list.append([i, j])
-	if len(list) > 0:
-		x = math.floor(random.random() * len(list))
-		return list[x]
-	return (-1, -1, -1)
-
 def medium_bot(board):
 	max_points = 0
-	max_mov = (-1, -1, '*')
+	max_mov = (-1, -1, '#')
 	for i in range(9):
 		for j in range(9):
-			if board[i][j] == '*':
+			if board[i][j] == '#':
 				for k in ascii_lowercase:
 					board[i][j] = k
 					cur_points = get_points(i, j, board)
 					if cur_points > max_points:
 						max_mov = (i, j, k)
 						max_points = cur_points
-					board[i][j] = '*'
+					board[i][j] = '#'
 	return max_mov
 
 # how many points will you get for (row, col) move
