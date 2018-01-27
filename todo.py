@@ -25,6 +25,7 @@ def get_todo_response(message: Dict[str, str], bot_handler: Any) -> str:
 	words = content.split()
 	if words[2] == "start" :
 		bot_handler.storage.put("list" , "")
+		return "todo initialized"
 	if words[2] == "list" :
 		res = bot_handler.storage.get("list") 
 		val = ""

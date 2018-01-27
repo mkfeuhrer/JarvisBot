@@ -34,8 +34,6 @@ class TimePass(object):
             dataTemp = data[2::]
             dataTemp = " ".join(dataTemp)
             results.append(self.query_weather(dataTemp))
-        elif query == "comics":
-            results.append(self.query_movie(data[2],addData))
         elif query == "lyrics":
             dataTemp = data[3::]
             dataTemp = " ".join(dataTemp)
