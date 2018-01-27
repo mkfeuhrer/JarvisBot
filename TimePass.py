@@ -2,8 +2,8 @@ from typing import Any, Dict
 from imdbpie import Imdb
 import lyricwikia
 from weather import Weather
+from zulip_bots.bots.TimePass import utils, sps, mindGame
 import os
-from stackapi import StackAPI
 
 
 class TimePass(object):
@@ -16,12 +16,12 @@ class TimePass(object):
 
     def handle_message(self, message: Dict[str, str], bot_handler: Any) -> None:
         results = []
-
+        query = ""
         if message["content"] == "" or message["content"] == "@jarvis help":
-            results.append("utils.QUICK_HELP")
+            results.append(utils.HELP_MESSAGE)
 
         data = message["content"].split()
-        if(len(data) > 2 and data[0] == "@jarvis"):
+        if(len(data) >= 2 and data[0] == "@jarvis"):
             query = data[1]
 
         addData = ''
@@ -46,6 +46,12 @@ class TimePass(object):
             dataTemp = data[5::]
             dataTemp = " ".join(dataTemp)
             results.append(self.query_ssh(data[2],data[3],data[4],dataTemp))
+        elif query == "sps":
+            results.append(sps.get_sps_response(message, bot_handler))
+        elif query == "mind-game":
+        	results.append(mindGame.get_mindGame_response(message,bot_handler))
+        else:
+        	results.append(utils.QUICK_HELP) 
 
         new_content = ''
         for idx, result in enumerate(results, 1):

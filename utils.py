@@ -1,4 +1,4 @@
-QUICK_HELP = 'Enter `@timepass help` for help on using the timepass.'
+QUICK_HELP = 'Enter `@jarvis help` for help on using the timepass.'
 
 HELP_MESSAGE = ('Timepass usage:\n'
                 '`@timepass movies all <movie-name>`\n'
