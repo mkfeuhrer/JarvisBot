@@ -67,4 +67,4 @@ def get_response(message: Dict[str, str], bot_handler: Any) -> str:
 		bot_handler.storage.put("word", word ) 
 		bot_handler.storage.put("done" , done ) 
 		bot_handler.storage.put("chances" , chances )
-	return "Prediction String: " + done + "\nChances Left: " + str(chances)
+		return "Prediction String: " + done + "\nChances Left: " + str(chances)

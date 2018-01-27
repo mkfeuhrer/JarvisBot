@@ -109,4 +109,4 @@ def get_mindGame_response(message: Dict[str, str], bot_handler: Any) -> str:
 		bot_handler.storage.put("dup3" , dup3 )
 		bot_handler.storage.put("dup4" , dup4 )
 		bot_handler.storage.put("total" , total )
-	return "New Formation :\n" + dup1 + "\n" + dup2 + "\n" + dup3 + "\n" + dup4 ;
+		return "New Formation :\n" + dup1 + "\n" + dup2 + "\n" + dup3 + "\n" + dup4 ;

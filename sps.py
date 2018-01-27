@@ -59,4 +59,4 @@ def get_sps_response(message: Dict[str, str], bot_handler: Any) -> str:
 		else :
 			val = "Scissors" 	
 		bot_handler.storage.put("score" , score)
-	return "Bot chose " + val + ".... New Score : " + str(temp1)
+		return "Bot chose " + val + ".... New Score : " + str(temp1)
