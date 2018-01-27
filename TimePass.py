@@ -4,6 +4,8 @@ import lyricwikia
 from weather import Weather
 from zulip_bots.bots.TimePass import utils, sps, mindGame, hangman, scrabble, todo, calculator, news
 import os
+from wit import Wit
+client = Wit('VMPD5FWPJO6QB7XVP5OKWR4TMHJFKZ75')
 
 
 class TimePass(object):
@@ -59,7 +61,53 @@ class TimePass(object):
         elif query == "news":
             results.append(news.get_news_response(message,bot_handler))
         else:
-        	results.append(utils.QUICK_HELP) 
+            dataTemp = data[1::]
+            dataTemp = " ".join(dataTemp)
+            print(dataTemp)
+            witAnalysis = client.message(dataTemp)
+            print(witAnalysis)
+            temp = witAnalysis['entities']
+            if temp.__len__() == 0:
+                results.append('Sorry :( I could not understatnd what you want to say. Try "@jarvis help" to get detailed help ')
+            else:
+                trait = witAnalysis['entities']['intent'][0]['value']
+                if   trait == "hello":
+                    results.append("Hello I am Jarvis nice to meet you !!!! :)")
+                elif trait == "bye":
+                    results.append("Good bye see you soon :)")
+                elif trait == "add-todo":
+                    results.append('To add a todo make a query as follows "@jarvis todo add <task to add here>"')
+                elif trait == "remove-todo":
+                    results.append('To remove a todo make a query as follows "@jarvis todo remove <id of task to remove>"')
+                elif trait == "lyrics":
+                    results.append('Loving song want to see its lyrics ? Make a query as follows "@jarvis lyrics <composer name> <track name>')
+                elif trait == "ssh":
+                    results.append('Want to connect to ssh a remote server ? Make a query as follows "@jarvis ssh <user_name> <server_ip> <password> <command>')
+                elif trait == "man":
+                    results.append('Need some help over usage of command ? make a query as follows "@jarvis man <command>')
+                elif trait == "weather":
+                    results.append('To get detailed weather report make a query as follows "@jarvis weather <city_name>"')
+                elif trait == "calculator":
+                    results.append('To start a calculator make a query as follows "@jarvis calculator <computation_to_solve>')
+                elif trait == "help":
+                    results.append('I think you are stuck try "@jarvis help" to get detailed help about bot')
+                elif trait == "list-todo":
+                    results.append('To get list of all todos make a query as follows "@jarvis todo list"')
+                elif trait == "movies":
+                    results.append('Want to get list of all time best movies or maybe details about the celebrity that you like most checkout "@jarvis movies" ')
+                elif trait == "scrabble":
+                    results.append('Want to play scrabble you are just a query away type "@jarvis scrabble start" to start game')
+                elif trait == "sps":
+                    results.append('Want to play stone paper scissor you are just a query away type "@jarvis sps start" to start game')
+                elif trait == "hangman":
+                    results.append('Want to play hangman you are just a query away type "@jarvis scrabble start" to start game')
+                elif trait == "memory-game":
+                    results.append('Sharpen your memeory by playing some memeory games type "@jarvis memory-game" to start game')
+                elif trait == "news":
+                    results.append('Get latest news from around the globe just type "@jarvis news <keyword>"')
+                elif trait == "cricket":
+                    results.append('To get scores of recent matches type "@jarvis cricket"')
+
 
         new_content = ''
         for idx, result in enumerate(results, 1):
