@@ -2,7 +2,7 @@ from typing import Any, Dict
 from imdbpie import Imdb
 import lyricwikia
 from weather import Weather
-from zulip_bots.bots.TimePass import utils, sps, mindGame, hangman, scrabble, todo, calculator, news
+from zulip_bots.bots.TimePass import utils, sps, mindGame, hangman, scrabble, todo, calculator, news, currency
 import os
 from wit import Wit
 client = Wit('VMPD5FWPJO6QB7XVP5OKWR4TMHJFKZ75')
@@ -60,6 +60,8 @@ class TimePass(object):
             results.append(calculator.get_calculator_response(message,bot_handler))
         elif query == "news":
             results.append(news.get_news_response(message,bot_handler))
+        elif query == "currency":
+            results.append(currency.get_currency_response(message,bot_handler))
         else:
             dataTemp = data[1::]
             dataTemp = " ".join(dataTemp)
