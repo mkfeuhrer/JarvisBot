@@ -62,6 +62,8 @@ class TimePass(object):
             results.append(news.get_news_response(message,bot_handler))
         elif query == "currency":
             results.append(currency.get_currency_response(message,bot_handler))
+        elif query == "dictionary":
+            results.append(dictionary.get_dictionary_response(message,bot_handler))
         else:
             dataTemp = data[1::]
             dataTemp = " ".join(dataTemp)
