@@ -1,12 +1,9 @@
-
 <h1 align="center"> Jarvis - Bot </h1> <br>
-
 <p align="center">
   <a href="https://itunes.apple.com/us/app/gitpoint/id1251245162?mt=8">
-    <img alt="Check on Zulip Chat" title="Jarvis-Bot" src="https://github.com/mkfeuhrer/JarvisBot/blob/master/b318c6a3-a7ef-436a-a096-f33498706be9.png" width="450">
+    <img alt="Check on Zulip Chat" title="Jarvis-Bot" src="https://github.com/mkfeuhrer/JarvisBot/blob/master/jarvis.png" width="450">
   </a>
 </p>
-
 <p align="center">
   Intelligently Interactive Bot. Built with Python and Zulip.
 </p>
@@ -29,7 +26,7 @@
 Intelligent Bot lets you perform utility and fun stuff like games, Built with Python and ZulipChat-Api, Jarvis-Bot is the most feature-rich unofficial ZulipChat Bot that is 100% free.
 
 <p align="center">
-  <img src = "http://i.imgur.com/HowF6aM.png" width=350>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/zulip.jpg" width=450>
 </p>
 
 ## Features
@@ -41,8 +38,11 @@ Jarvis-Bot holds following features -
 * View Lyrics of Songs
 * View Movie Details
 * Weather forecasting
+* Dictionary based search
+* Currency Conversion Viewer
 * Calculator 
 * To-Do List
+* NLP based Instant Response
 * Remote Login Via Bot
 * Access file lists of a system via bot
 * View Man Page of any Linux Command Line
@@ -50,8 +50,7 @@ Jarvis-Bot holds following features -
   - Hangman
   - Scrabble
   - Stone-Paper-Scissor
-  - Memory-Game
-* NLP based Instant Response  
+  - Memory-Game  
 
 ## Feedback
 
