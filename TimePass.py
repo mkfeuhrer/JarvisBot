@@ -66,6 +66,8 @@ class TimePass(object):
             results.append(dictionary.get_dictionary_response(message,bot_handler))
         elif query == "cricket":
             results.append(cricketScore.get_get_cricketScore_response(message,bot_handler))
+        elif query == "help":
+            results.append(utils.HELP_MESSAGE)
         else:
             dataTemp = data[1::]
             dataTemp = " ".join(dataTemp)

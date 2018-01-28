@@ -12,7 +12,7 @@ drwxr-xr-x 10 mohit mohit     4096 Jan 27 07:02 Desktop
 drwxrwxr-x  7 mohit mohit     4096 Jun 12  2017 djangoblog
 drwxrwxr-x  2 mohit mohit     4096 Jan 20 09:38 dockerimage-blockchain
 drwxr-xr-x  7 mohit mohit     4096 Nov  8 00:53 Documents
-drwxr-xr-x  6 mohit mohit     4096 Jan 27 23:56 Downloads
+drwxr-xr-x  8 mohit mohit     4096 Jan 28 05:43 Downloads
 -rw-r--r--  1 mohit mohit     8980 Jun  9  2017 examples.desktop
 drwxrwxr-x  2 mohit mohit     4096 Jun 24  2017 extension
 drwxrwxr-x  4 mohit mohit     4096 Jan 25 19:47 IdeaProjects
