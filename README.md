@@ -1,6 +1,6 @@
 <h1 align="center"> Jarvis - Bot </h1> <br>
 <p align="center">
-  <a href="https://itunes.apple.com/us/app/gitpoint/id1251245162?mt=8">
+  <a href="https://github.com/mkfeuhrer/JarvisBot">
     <img alt="Check on Zulip Chat" title="Jarvis-Bot" src="https://github.com/mkfeuhrer/JarvisBot/blob/master/jarvis.png" width="550">
   </a>
 </p>
