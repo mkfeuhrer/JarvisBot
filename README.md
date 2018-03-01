@@ -77,8 +77,8 @@ To deploy Jarvis bot using your local machine as server, follow following steps 
 * You can now finally use power of Jarvis in your organisation.
 
 Note: By default Jarvis bot only responds to mentions in private messages. If you want to change this behaviour so that Jarvis also replies to mentions in stream messages then do following changes - 
-* In line 137 of jarvisBot.py change the value of type from private to stream.
-* In line 139 of jarvisBot.py change the value of to from message["sender_email"] to message["display_recipient"]
+* In line 137 of jarvisBot.py change the value of **type** from **private** to **stream**.
+* In line 139 of jarvisBot.py change the value of **to** from **message["sender_email"]** to **message["display_recipient"]**
 
 Please also note some of the features may not work properly when Jarvis is used in stream conversations. We will be updating the bot soon so that it works properly even in stream conversations, Till then please be with us.
 
