@@ -134,9 +134,9 @@ class JarvisBot(object):
         for idx, result in enumerate(results, 1):
             new_content += ((str(idx)) if len(results) > 1 else '') + result + '\n'
         self.client.send_message({
-            "type": "stream",
+            "type": "private",
             "subject": message["subject"],
-            "to": message["display_recipient"],
+            "to": message["sender_email"],
             "content": new_content
             })
 
