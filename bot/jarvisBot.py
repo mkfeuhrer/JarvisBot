@@ -10,7 +10,7 @@ import utils, sps, mindGame, hangman, scrabble, todo, calculator, news, currency
 from wit import Wit
 client = Wit('VMPD5FWPJO6QB7XVP5OKWR4TMHJFKZ75')
 
-BOT_MAIL = "Jarvis-bot@woc.zulipchat.com"
+BOT_MAIL = "jarvis1-bot@woc.zulipchat.com"
 
 class JarvisBot(object):
     '''
@@ -20,7 +20,7 @@ class JarvisBot(object):
         return '''Build with python and Zulip chat api, Jarvis Bot is the most feature rich unofficial Zulip chat bot that is 100% free and open source.'''
 
     def __init__(self):
-        self.client = zulip.Client(site="https://woc.zulipchat.com/api/")
+        self.client = zulip.Client(site="https://woc.zulipchat.com/")
         json = self.client.get_streams()["streams"]
         streams = [{"name": stream["name"]} for stream in json]
         self.client.add_subscriptions(streams)
