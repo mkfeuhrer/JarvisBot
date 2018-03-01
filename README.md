@@ -1,7 +1,7 @@
 <h1 align="center"> Jarvis - Bot </h1> <br>
 <p align="center">
   <a href="https://github.com/mkfeuhrer/JarvisBot">
-    <img alt="Check on Zulip Chat" title="Jarvis-Bot" src="https://github.com/mkfeuhrer/JarvisBot/blob/master/JarvisBot.gif" width="550">
+    <img alt="Check on Zulip Chat" title="Jarvis-Bot" src="https://github.com/mkfeuhrer/JarvisBot/blob/master/images/JarvisBot.gif" width="550">
   </a>
 </p>
 <p align="center">
@@ -10,11 +10,12 @@
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Feedback](#feedback)
-- [Contributors](#contributors)
-- [Contribute](#contribute)
+- [Introduction](#Introduction)
+- [Features](#Features)
+- [Deploy](#Deploy)
+- [Feedback](#Feedback)
+- [Contributors](#Contributors)
+- [Contribute](#Contribute)
 - [Acknowledgement](#Acknowledgement)
 
 ## Introduction
@@ -26,7 +27,7 @@
 Intelligent Bot lets you perform utility and fun stuff like games, Built with Python and ZulipChat-Api, Jarvis-Bot is the most feature-rich unofficial ZulipChat Bot that is 100% free.
 
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/Zulip.jpg" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/images/Zulip.jpg" width=550>
 </p>
 
 ## Features
@@ -51,6 +52,36 @@ Jarvis-Bot holds following features -
   - Scrabble
   - Stone-Paper-Scissor
   - Memory-Game  
+
+## Deploy
+
+To deploy Jarvis bot using your local machine as server, follow following steps -
+
+* Firstly create a zulip organisation on which you want to deploy bot. If you already have one then you may skip this step.
+* Register a new bot user on the Zulip server's web interface.
+	* Log in to the Zulip server.
+	* Navigate to Settings -> Your bots -> Add a new bot. Select Generic bot for bot type, set both bot-name and bot username to Jarvis and click on Create bot.
+	* A new bot user should appear in the Active bots panel.
+* Download the bot's zuliprc configuration file to your computer.
+	* Go to Settings -> Your bots
+	* In the Active bots panel, click on the little green download icon to download its configuration file zuliprc (the structure of this file is explained here).
+	* Copy the downloaded file to your home directory and rename it as '.zuliprc'.
+* Make sure sure that your system has following packages installed -
+	* enchant (Please make sure your enchant version is <= 1.6.1-2)
+	* sshpass
+	* aspell-en
+* Install all required python packages, rum command ```pip3 install -r requirements.txt```
+* In line 23 of /bot/jarvisBot.py file change the site parameter with the URL of your organisation.
+* Also update BOT_MAIL variable with the mail ID of your bot.
+* Now we are all set, to run bot enter following command ```python3 jarvisBot.py```
+* You can now finally use power of Jarvis in your organisation.
+
+Note: By default Jarvis bot only responds to mentions in private messages. If you want to change this behaviour so that Jarvis also replies to mentions in stream messages then do following changes - 
+	* In line 137 of jarvisBot.py change the value of type from private to stream.
+	* In line 139 of jarvisBot.py change the value of to from message["sender_email"] to message["display_recipient"]
+
+Please also note some of the features currently may not work properly when Jarvis is used in stream.
+
 
 ## Feedback
 
