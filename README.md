@@ -13,6 +13,7 @@
 - [Introduction](#Introduction)
 - [Features](#Features)
 - [Deploy](#Deploy)
+- [Screenshots](#Screenshots)
 - [Feedback](#Feedback)
 - [Contributors](#Contributors)
 - [Contribute](#Contribute)
@@ -82,6 +83,36 @@ Note: By default Jarvis bot only responds to mentions in private messages. If yo
 
 Please also note some of the features may not work properly when Jarvis is used in stream conversations. We will be updating the bot soon so that it works properly even in stream conversations, Till then please be with us.
 
+## Screenshots
+
+<strong> Finding Lyrics of a song :</strong> 
+<p align="center">
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/Screen%20Shot%202018-01-28%20at%203.43.19%20AM.png" width=550>
+</p>
+
+<strong> Weather Forecasting :</strong>
+<p align="center">
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/Screen%20Shot%202018-01-28%20at%203.48.04%20AM.png" width=550>
+</p>
+
+<strong> Simple Calculator :</strong>
+<p align="center">
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/Screen%20Shot%202018-01-28%20at%203.49.56%20AM.png" width=550>
+</p>
+
+<strong> To-do Manager :</strong>
+<p align="center">
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/Screen%20Shot%202018-01-28%20at%203.55.41%20AM.png" width=550>
+</p>
+
+<p align="center">
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/Screen%20Shot%202018-01-28%20at%203.57.05%20AM.png" width=550>
+</p>
+
+<strong> Popular Trending Shows : </strong>
+<p align="center">
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/movies.png" width=550>
+</p>
 
 ## Feedback
 
