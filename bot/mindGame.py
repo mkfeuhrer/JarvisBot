@@ -1,9 +1,12 @@
+import sys, os
+sys.path.insert(0,os.getcwd())
+
 import copy
 import importlib
 from math import log10, floor
 
 import re
-from zulip_bots.bots.converter import utils
+from converter import utils
 
 from typing import Any, Dict, List
 '''
@@ -17,7 +20,7 @@ class mindGame(object):
 handler_class = mindGame
 '''
 
-def get_mindGame_response(message: Dict[str, str], bot_handler: Any) -> str:
+def get_mindGame_response(message: Dict[str, str]) -> str:
 	content = message['content']
 	words = content.lower().split()
 	original1 = "abdc"

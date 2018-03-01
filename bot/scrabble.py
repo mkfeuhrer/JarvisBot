@@ -1,9 +1,12 @@
+import sys, os
+sys.path.insert(0,os.getcwd())
+
 # dictionay to check valid words
 import enchant
 D = enchant.Dict("en_US")
 
 # code for bot ai
-from zulip_bots.bots.TimePass import ai
+import ai
 
 # implementation class
 '''
@@ -19,7 +22,7 @@ class ScrabbleBotHandler(object):
 handler_class = ScrabbleBotHandler
 '''
 
-def get_response(message, bot_handler):
+def get_response(message):
 	data = message['content'].split()
 	if len(data) == 3:
 

@@ -1,9 +1,12 @@
+import sys, os
+sys.path.insert(0,os.getcwd())
+
 import copy
 import importlib
 from math import log10, floor
 from random_words import RandomWords
 import re
-from zulip_bots.bots.converter import utils
+from converter import utils
 
 from typing import Any, Dict, List
 '''
@@ -17,7 +20,7 @@ class hangman(object):
 handler_class = hangman
 '''
 
-def get_response(message: Dict[str, str], bot_handler: Any) -> str:
+def get_response(message: Dict[str, str]) -> str:
 	content = message['content']
 	words = content.lower().split()
 	if len(words) < 2:

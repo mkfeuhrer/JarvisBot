@@ -1,7 +1,7 @@
 <h1 align="center"> Jarvis - Bot </h1> <br>
 <p align="center">
   <a href="https://github.com/mkfeuhrer/JarvisBot">
-    <img alt="Check on Zulip Chat" title="Jarvis-Bot" src="https://github.com/mkfeuhrer/JarvisBot/blob/master/jarvis.png" width="550">
+    <img alt="Check on Zulip Chat" title="Jarvis-Bot" src="https://github.com/mkfeuhrer/JarvisBot/blob/master/JarvisBot.gif" width="550">
   </a>
 </p>
 <p align="center">
@@ -26,7 +26,7 @@
 Intelligent Bot lets you perform utility and fun stuff like games, Built with Python and ZulipChat-Api, Jarvis-Bot is the most feature-rich unofficial ZulipChat Bot that is 100% free.
 
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/Zulipppppp.jpg" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/Zulip.jpg" width=550>
 </p>
 
 ## Features

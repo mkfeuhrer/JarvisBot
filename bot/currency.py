@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0,os.getcwd())
+
 import requests
 import json
 from typing import Any, Dict, List
@@ -15,7 +18,7 @@ class currency(object):
 handler_class = currency
 '''
 
-def get_currency_response(message: Dict[str, str], bot_handler: Any) -> str:
+def get_currency_response(message: Dict[str, str]) -> str:
 	content = message['content']
 	words = content.split()
 	res = requests.get('https://api.fixer.io/latest?base=' + words[2] + '&symbols=' + words[3] ).json()

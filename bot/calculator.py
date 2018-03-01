@@ -1,10 +1,13 @@
+import sys, os
+sys.path.insert(0,os.getcwd())
+
 import copy
 import importlib
 import random
 from math import log10, floor
 
 import re
-from zulip_bots.bots.converter import utils
+from converter import utils
 
 from typing import Any, Dict, List
 

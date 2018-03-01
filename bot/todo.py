@@ -1,10 +1,13 @@
+import sys, os
+sys.path.insert(0,os.getcwd())
+
 import copy
 import importlib
 import random
 from math import log10, floor
 
 import re
-from zulip_bots.bots.converter import utils
+from converter import utils
 from typing import Any, Dict, List
 
 '''
@@ -20,7 +23,7 @@ class todo(object):
 handler_class = todo
 '''
 
-def get_todo_response(message: Dict[str, str], bot_handler: Any) -> str:
+def get_todo_response(message: Dict[str, str]) -> str:
 	content = message['content']
 	words = content.split()
 	if words[2] == "start" :

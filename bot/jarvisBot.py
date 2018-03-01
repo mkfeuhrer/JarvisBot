@@ -1,29 +1,42 @@
+import sys, os, zulip
+sys.path.insert(0,os.getcwd())
+
 from typing import Any, Dict
 from imdbpie import Imdb
 import lyricwikia
 from weather import Weather
-from zulip_bots.bots.TimePass import utils, sps, mindGame, hangman, scrabble, todo, calculator, news, currency, cricketScore
-import os
+
+import utils, sps, mindGame, hangman, scrabble, todo, calculator, news, currency, cricketScore
 from wit import Wit
 client = Wit('VMPD5FWPJO6QB7XVP5OKWR4TMHJFKZ75')
 
+BOT_MAIL = "Jarvis-bot@woc.zulipchat.com"
 
-class TimePass(object):
+class JarvisBot(object):
     '''
     A docstring documenting this bot.
     '''
-
     def usage(self):
         return '''Build with python and Zulip chat api, Jarvis Bot is the most feature rich unofficial Zulip chat bot that is 100% free and open source.'''
 
-    def handle_message(self, message: Dict[str, str], bot_handler: Any) -> None:
+    def __init__(self):
+        self.client = zulip.Client(site="https://woc.zulipchat.com/api/")
+        json = self.client.get_streams()["streams"]
+        streams = [{"name": stream["name"]} for stream in json]
+        self.client.add_subscriptions(streams)
+
+    def handle_message(self, message: Dict[str, str]) -> None:
         results = []
         query = ""
-        if message["content"] == "" or message["content"] == "@jarvis help":
+
+        if message["sender_email"] == BOT_MAIL:
+        	return
+
+        if message["content"] == "" or message["content"] == "@Jarvis help":
             results.append(utils.HELP_MESSAGE)
 
         data = message["content"].split()
-        if(len(data) >= 2 and data[0] == "@jarvis"):
+        if(len(data) >= 2 and (data[0] == "@**Jarvis**" or data[0] == "Jarvis")):
             query = data[1]
 
         addData = ''
@@ -47,25 +60,25 @@ class TimePass(object):
             dataTemp = " ".join(dataTemp)
             results.append(self.query_ssh(data[2],data[3],data[4],dataTemp))
         elif query == "sps":
-            results.append(sps.get_sps_response(message, bot_handler))
+            results.append(sps.get_sps_response(message,))
         elif query == "mind-game":
-        	results.append(mindGame.get_mindGame_response(message,bot_handler))
+        	results.append(mindGame.get_mindGame_response(message))
         elif query == "hangman":
-        	results.append(hangman.get_response(message,bot_handler))
+        	results.append(hangman.get_response(message))
         elif query == "scrabble":
-        	results.append(scrabble.get_response(message,bot_handler))
+        	results.append(scrabble.get_response(message))
         elif query == "todo":
-        	results.append(todo.get_todo_response(message,bot_handler))
+        	results.append(todo.get_todo_response(message))
         elif query == "calculator":
-            results.append(calculator.get_calculator_response(message,bot_handler))
+            results.append(calculator.get_calculator_response(message))
         elif query == "news":
-            results.append(news.get_news_response(message,bot_handler))
+            results.append(news.get_news_response(message))
         elif query == "currency":
-            results.append(currency.get_currency_response(message,bot_handler))
+            results.append(currency.get_currency_response(message))
         elif query == "dictionary":
-            results.append(dictionary.get_dictionary_response(message,bot_handler))
+            results.append(dictionary.get_dictionary_response(message))
         elif query == "cricket":
-            results.append(cricketScore.get_get_cricketScore_response(message,bot_handler))
+            results.append(cricketScore.get_get_cricketScore_response(message))
         elif query == "help":
             results.append(utils.HELP_MESSAGE)
         else:
@@ -76,7 +89,7 @@ class TimePass(object):
             print(witAnalysis)
             temp = witAnalysis['entities']
             if temp.__len__() == 0:
-                results.append('Sorry :( I could not understatnd what you want to say. Try "@jarvis help" to get detailed help ')
+                results.append('Sorry :( I could not understatnd what you want to say. Try "@Jarvis help" to get detailed help ')
             else:
                 trait = witAnalysis['entities']['intent'][0]['value']
                 if   trait == "hello":
@@ -84,44 +97,48 @@ class TimePass(object):
                 elif trait == "bye":
                     results.append("Good bye see you soon :)")
                 elif trait == "add-todo":
-                    results.append('To add a todo make a query as follows "@jarvis todo add <task to add here>"')
+                    results.append('To add a todo make a query as follows "@Jarvis todo add <task to add here>"')
                 elif trait == "remove-todo":
-                    results.append('To remove a todo make a query as follows "@jarvis todo remove <id of task to remove>"')
+                    results.append('To remove a todo make a query as follows "@Jarvis todo remove <id of task to remove>"')
                 elif trait == "lyrics":
-                    results.append('Loving song want to see its lyrics ? Make a query as follows "@jarvis lyrics <composer name> <track name>')
+                    results.append('Loving song want to see its lyrics ? Make a query as follows "@Jarvis lyrics <composer name> <track name>')
                 elif trait == "ssh":
-                    results.append('Want to connect to ssh a remote server ? Make a query as follows "@jarvis ssh <user_name> <server_ip> <password> <command>')
+                    results.append('Want to connect to ssh a remote server ? Make a query as follows "@Jarvis ssh <user_name> <server_ip> <password> <command>')
                 elif trait == "man":
-                    results.append('Need some help over usage of command ? make a query as follows "@jarvis man <command>')
+                    results.append('Need some help over usage of command ? make a query as follows "@Jarvis man <command>')
                 elif trait == "weather":
-                    results.append('To get detailed weather report make a query as follows "@jarvis weather <city_name>"')
+                    results.append('To get detailed weather report make a query as follows "@Jarvis weather <city_name>"')
                 elif trait == "calculator":
-                    results.append('To start a calculator make a query as follows "@jarvis calculator <computation_to_solve>')
+                    results.append('To start a calculator make a query as follows "@Jarvis calculator <computation_to_solve>')
                 elif trait == "help":
-                    results.append('I think you are stuck try "@jarvis help" to get detailed help about bot')
+                    results.append('I think you are stuck try "@Jarvis help" to get detailed help about bot')
                 elif trait == "list-todo":
-                    results.append('To get list of all todos make a query as follows "@jarvis todo list"')
+                    results.append('To get list of all todos make a query as follows "@Jarvis todo list"')
                 elif trait == "movies":
-                    results.append('Want to get list of all time best movies or maybe details about the celebrity that you like most checkout "@jarvis movies" ')
+                    results.append('Want to get list of all time best movies or maybe details about the celebrity that you like most checkout "@Jarvis movies" ')
                 elif trait == "scrabble":
-                    results.append('Want to play scrabble you are just a query away type "@jarvis scrabble start" to start game')
+                    results.append('Want to play scrabble you are just a query away type "@Jarvis scrabble start" to start game')
                 elif trait == "sps":
-                    results.append('Want to play stone paper scissor you are just a query away type "@jarvis sps start" to start game')
+                    results.append('Want to play stone paper scissor you are just a query away type "@Jarvis sps start" to start game')
                 elif trait == "hangman":
-                    results.append('Want to play hangman you are just a query away type "@jarvis scrabble start" to start game')
+                    results.append('Want to play hangman you are just a query away type "@Jarvis scrabble start" to start game')
                 elif trait == "memory-game":
-                    results.append('Sharpen your memeory by playing some memeory games type "@jarvis memory-game" to start game')
+                    results.append('Sharpen your memeory by playing some memeory games type "@Jarvis memory-game" to start game')
                 elif trait == "news":
-                    results.append('Get latest news from around the globe just type "@jarvis news <keyword>"')
+                    results.append('Get latest news from around the globe just type "@Jarvis news <keyword>"')
                 elif trait == "cricket":
-                    results.append('To get scores of recent matches type "@jarvis cricket"')
+                    results.append('To get scores of recent matches type "@Jarvis cricket"')
 
 
         new_content = ''
         for idx, result in enumerate(results, 1):
             new_content += ((str(idx)) if len(results) > 1 else '') + result + '\n'
-
-        bot_handler.send_reply(message, new_content)
+        self.client.send_message({
+            "type": "stream",
+            "subject": message["subject"],
+            "to": message["display_recipient"],
+            "content": new_content
+            })
 
     def query_movie(self, query, data):
 
@@ -170,4 +187,15 @@ class TimePass(object):
 
         return output.read() + " " + error.read()
 
-handler_class = TimePass
+handler_class = JarvisBot
+
+def main():
+    bot = JarvisBot()
+    bot.client.call_on_each_message(bot.handle_message)
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("Thanks for using Jarvis Bot. See you soon!")
+        sys.exit(0)
