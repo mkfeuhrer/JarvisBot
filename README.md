@@ -67,9 +67,9 @@ To deploy Jarvis bot using your local machine as server, follow following steps 
 	* In the Active bots panel, click on the little green download icon to download its configuration file zuliprc (the structure of this file is explained here).
 	* Copy the downloaded file to your home directory and rename it as '.zuliprc'.
 * Make sure sure that your system has following packages installed -
-	* enchant (Please make sure your enchant version is <= 1.6.1-2)
-	* sshpass
-	* aspell-en
+	* enchant (Please make sure your enchant version is <= 1.6.1-2) 
+	* sshpass - sudo apt-get install sshpass
+	* aspell-en - sudo apt-get install aspell-en
 * Install all required python packages, rum command ```pip3 install -r requirements.txt```
 * In line 23 of /bot/jarvisBot.py file change the site parameter with the URL of your organisation.
 * Also update BOT_MAIL variable with the mail ID of your bot.
