@@ -22,7 +22,7 @@ class sps(object):
  
 handler_class = sps
 '''
-def get_sps_response(message: Dict[str, str]) -> str:
+def get_sps_response(message: Dict[str, str], bot_handler: Any) -> str:
 	content = message['content']
 	words = content.lower().split()
 	if words[2] == "start" :

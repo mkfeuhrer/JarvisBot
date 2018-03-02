@@ -18,7 +18,7 @@ class cricketScore(object):
 handler_class = cricketScore
 '''
 
-def get_cricketScore_response(message: Dict[str, str]) -> str:
+def get_cricketScore_response(message: Dict[str, str], bot_handler: Any) -> str:
 	content = message['content']
 	words = content.lower().split()
 	matches = requests.get('http://cricapi.com/api/matches?apikey=rRjw4YvDDjcXtIj5GAE5wV25fAl1').json()

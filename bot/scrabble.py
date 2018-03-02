@@ -7,6 +7,7 @@ D = enchant.Dict("en_US")
 
 # code for bot ai
 import ai
+from typing import Any,Dict,List
 
 # implementation class
 '''
@@ -22,7 +23,7 @@ class ScrabbleBotHandler(object):
 handler_class = ScrabbleBotHandler
 '''
 
-def get_response(message):
+def get_response(message: Dict[str, str], bot_handler: Any):
 	data = message['content'].split()
 	if len(data) == 3:
 

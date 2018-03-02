@@ -20,7 +20,7 @@ class mindGame(object):
 handler_class = mindGame
 '''
 
-def get_mindGame_response(message: Dict[str, str]) -> str:
+def get_mindGame_response(message: Dict[str, str], bot_handler: Any) -> str:
 	content = message['content']
 	words = content.lower().split()
 	original1 = "abdc"

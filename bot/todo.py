@@ -23,7 +23,7 @@ class todo(object):
 handler_class = todo
 '''
 
-def get_todo_response(message: Dict[str, str]) -> str:
+def get_todo_response(message: Dict[str, str], bot_handler: Any) -> str:
 	content = message['content']
 	words = content.split()
 	if words[2] == "start" :

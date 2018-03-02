@@ -17,7 +17,7 @@ class news(object):
 handler_class = news
 '''
 
-def get_news_response(message: Dict[str, str]) -> str:
+def get_news_response(message: Dict[str, str], bot_handler: Any) -> str:
 	content = message['content']
 	words = content.lower().split()
 	articles = requests.get('https://newsapi.org/v2/everything?q=' + words[2] + '&apiKey=142ba11e03d74ba38f859c785eee017f').json()

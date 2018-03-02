@@ -10,8 +10,6 @@ import utils, sps, mindGame, hangman, scrabble, todo, calculator, news, currency
 from wit import Wit
 client = Wit('VMPD5FWPJO6QB7XVP5OKWR4TMHJFKZ75')
 
-BOT_MAIL = "jarvis1-bot@woc.zulipchat.com"
-
 class JarvisBot(object):
     '''
     A docstring documenting this bot.
@@ -19,24 +17,17 @@ class JarvisBot(object):
     def usage(self):
         return '''Build with python and Zulip chat api, Jarvis Bot is the most feature rich unofficial Zulip chat bot that is 100% free and open source.'''
 
-    def __init__(self):
-        self.client = zulip.Client(site="https://woc.zulipchat.com/")
-        json = self.client.get_streams()["streams"]
-        streams = [{"name": stream["name"]} for stream in json]
-        self.client.add_subscriptions(streams)
-
-    def handle_message(self, message: Dict[str, str]) -> None:
+    def handle_message(self, message: Dict[str, str], bot_handler: Any) -> None:
         results = []
         query = ""
-
-        if message["sender_email"] == BOT_MAIL:
-        	return
-
-        if message["content"] == "" or message["content"] == "@Jarvis help":
+        print(message["content"])
+        if message["content"] == "" or message["content"] == "help":
             results.append(utils.HELP_MESSAGE)
 
         data = message["content"].split()
-        if(len(data) >= 2 and (data[0] == "@**Jarvis**" or data[0] == "Jarvis")):
+        if(data[0] != "Jarvis"):
+        	data.insert(0,"Jarvis")
+        if(len(data) >= 2):
             query = data[1]
 
         addData = ''
@@ -60,25 +51,25 @@ class JarvisBot(object):
             dataTemp = " ".join(dataTemp)
             results.append(self.query_ssh(data[2],data[3],data[4],dataTemp))
         elif query == "sps":
-            results.append(sps.get_sps_response(message,))
+            results.append(sps.get_sps_response(message, bot_handler))
         elif query == "mind-game":
-        	results.append(mindGame.get_mindGame_response(message))
+        	results.append(mindGame.get_mindGame_response(message,bot_handler))
         elif query == "hangman":
-        	results.append(hangman.get_response(message))
+        	results.append(hangman.get_response(message,bot_handler))
         elif query == "scrabble":
-        	results.append(scrabble.get_response(message))
+        	results.append(scrabble.get_response(message,bot_handler))
         elif query == "todo":
-        	results.append(todo.get_todo_response(message))
+        	results.append(todo.get_todo_response(message,bot_handler))
         elif query == "calculator":
-            results.append(calculator.get_calculator_response(message))
+            results.append(calculator.get_calculator_response(message,bot_handler))
         elif query == "news":
-            results.append(news.get_news_response(message))
+            results.append(news.get_news_response(message,bot_handler))
         elif query == "currency":
-            results.append(currency.get_currency_response(message))
+            results.append(currency.get_currency_response(message,bot_handler))
         elif query == "dictionary":
-            results.append(dictionary.get_dictionary_response(message))
+            results.append(dictionary.get_dictionary_response(message,bot_handler))
         elif query == "cricket":
-            results.append(cricketScore.get_get_cricketScore_response(message))
+            results.append(cricketScore.get_get_cricketScore_response(message,bot_handler))
         elif query == "help":
             results.append(utils.HELP_MESSAGE)
         else:
@@ -133,12 +124,8 @@ class JarvisBot(object):
         new_content = ''
         for idx, result in enumerate(results, 1):
             new_content += ((str(idx)) if len(results) > 1 else '') + result + '\n'
-        self.client.send_message({
-            "type": "private",
-            "subject": message["subject"],
-            "to": message["sender_email"],
-            "content": new_content
-            })
+
+        bot_handler.send_reply(message, new_content)
 
     def query_movie(self, query, data):
 
@@ -188,14 +175,3 @@ class JarvisBot(object):
         return output.read() + " " + error.read()
 
 handler_class = JarvisBot
-
-def main():
-    bot = JarvisBot()
-    bot.client.call_on_each_message(bot.handle_message)
-
-if __name__ == "__main__":
-    try:
-        main()
-    except KeyboardInterrupt:
-        print("Thanks for using Jarvis Bot. See you soon!")
-        sys.exit(0)
