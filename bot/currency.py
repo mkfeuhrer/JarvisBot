@@ -22,5 +22,6 @@ def get_currency_response(message: Dict[str, str], bot_handler: Any) -> str:
 	content = message['content']
 	words = content.split()
 	res = requests.get('https://api.fixer.io/latest?base=' + words[2] + '&symbols=' + words[3] ).json()
+	print(res)
 	val = "1 " + words[2] + " = " + str(res['rates'][words[3]]) + " " + words[3] ;
 	return val 

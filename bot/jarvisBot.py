@@ -6,7 +6,7 @@ from imdbpie import Imdb
 import lyricwikia
 from weather import Weather
 
-import utils, sps, mindGame, hangman, scrabble, todo, calculator, news, currency, cricketScore
+import utils, sps, mindGame, hangman, scrabble, todo, calculator, news, currency, cricketScore, dictionary
 from wit import Wit
 client = Wit('VMPD5FWPJO6QB7XVP5OKWR4TMHJFKZ75')
 
