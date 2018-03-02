@@ -73,6 +73,8 @@ To deploy Jarvis bot using your local machine as server, follow following steps 
 	* aspell-en - (For debian based system install using ```sudo apt-get install aspell-en```)
 * Install all required python packages, rum command ```pip3 install -r requirements.txt```
 * Now we are all set, to run bot enter following command ```zulip-run-bot <absolute path to jarvisBot.py file > --config-file <absolute path to downloaded zuliprc file>```
+
+Example Usage - ```zulip-run-bot ~/Projects/JarvisBot/bot/jarvisBot --config-file ~/Projects/JarvisBot/bot/zuliprc```
 * You can now finally use power of Jarvis in your organisation.
 
 ## Screenshots
