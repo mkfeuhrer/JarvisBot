@@ -113,7 +113,7 @@ class JarvisBot(object):
                 elif trait == "sps":
                     results.append('Want to play stone paper scissor you are just a query away type "@Jarvis sps start" to start game')
                 elif trait == "hangman":
-                    results.append('Want to play hangman you are just a query away type "@Jarvis scrabble start" to start game')
+                    results.append('Want to play hangman you are just a query away type "@Jarvis hangman start" to start game')
                 elif trait == "memory-game":
                     results.append('Sharpen your memeory by playing some memeory games type "@Jarvis memory-game" to start game')
                 elif trait == "news":

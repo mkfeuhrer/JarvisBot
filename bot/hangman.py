@@ -33,7 +33,7 @@ def get_response(message: Dict[str, str], bot_handler: Any) -> str:
 		# word = "avishek"
 		chances = 5
 		word = RandomWords().random_word()
-		done = "".join(['*' for i in range(len(word))])
+		done = "".join(['#' for i in range(len(word))])
 		# done = "*******"
 		bot_handler.storage.put("word", word ) 
 		bot_handler.storage.put("done" , done ) 
@@ -49,7 +49,7 @@ def get_response(message: Dict[str, str], bot_handler: Any) -> str:
 		i = 0 
 		val = False 
 		while i < len( word ) :
-			if letter == word[i] and done[i] == "*" : 
+			if letter == word[i] and done[i] == "#" : 
 				val = True
 				done = done[:i] + word[i] + done[i+1:]
 			i += 1
