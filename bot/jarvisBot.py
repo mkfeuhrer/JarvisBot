@@ -70,7 +70,7 @@ class JarvisBot(object):
         elif query == "dictionary":
             results.append(dictionary.get_dictionary_response(message,bot_handler))
         elif query == "cricket":
-            results.append(cricketScore.get_get_cricketScore_response(message,bot_handler))
+            results.append(cricketScore.get_cricketScore_response(message,bot_handler))
         elif query == "help":
             results.append(utils.HELP_MESSAGE)
         else:
