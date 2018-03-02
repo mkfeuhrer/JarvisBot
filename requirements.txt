@@ -5,3 +5,4 @@ weather-api==0.0.4
 wit==4.3.0
 RandomWords==0.2.1
 zulip==0.4.0
+zulip_bots==0.4.1

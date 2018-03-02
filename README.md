@@ -17,13 +17,14 @@
 - [Feedback](#Feedback)
 - [Contributors](#Contributors)
 - [Contribute](#Contribute)
+- [Announcements](#Announcements)
 - [Acknowledgement](#Acknowledgement)
 
 ## Introduction
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![GitHub Stars](https://img.shields.io/github/stars/mkfeuhrer/JarvisBot.svg)](https://github.com/mkfeuhrer/) 
-[![Current Version](https://img.shields.io/badge/version-1.0-green.svg)](https://github.com/mkfeuhrer/JarvisBot)
+[![Current Version](https://img.shields.io/badge/version-1.1-green.svg)](https://github.com/mkfeuhrer/JarvisBot)
 
 Intelligent Bot lets you perform utility and fun stuff like games, Built with Python and ZulipChat-Api, Jarvis-Bot is the most feature-rich unofficial ZulipChat Bot that is 100% free.
 
@@ -66,22 +67,13 @@ To deploy Jarvis bot using your local machine as server, follow following steps 
 * Download the bot's zuliprc configuration file to your computer.
 	* Go to Settings -> Your bots
 	* In the Active bots panel, click on the little green download icon to download its configuration file zuliprc (the structure of this file is explained here).
-	* Copy the downloaded file to your home directory and <strong>rename</strong> it as '.zuliprc'.
 * Make sure sure that your system has following packages installed -
 	* enchant (Please make sure your enchant version is <= 1.6.1-2) 
 	* sshpass (For debian based system install using ```sudo apt-get install sshpass```)
 	* aspell-en - (For debian based system install using ```sudo apt-get install aspell-en```)
 * Install all required python packages, rum command ```pip3 install -r requirements.txt```
-* In ```line 23 - /bot/jarvisBot.py``` file change the site parameter with the URL of your organisation.
-* Also update BOT_MAIL variable with the mail ID of your bot. - ```line 13 - jarvisBot.py```
-* Now we are all set, to run bot enter following command ```python3 jarvisBot.py```
+* Now we are all set, to run bot enter following command ```zulip-run-bot <absolute path to jarvisBot.py file > --config-file <absolute path to downloaded zuliprc file>```
 * You can now finally use power of Jarvis in your organisation.
-
-Note: By default Jarvis bot only responds to mentions in private messages. If you want to change this behaviour so that Jarvis also replies to mentions in stream messages then do following changes - 
-* In line 137 of jarvisBot.py change the value of **type** from **private** to **stream**.
-* In line 139 of jarvisBot.py change the value of **to** from **message["sender_email"]** to **message["display_recipient"]**
-
-Please also note some of the features may not work properly when Jarvis is used in stream conversations. We will be updating the bot soon so that it works properly even in stream conversations, Till then please be with us.
 
 ## Screenshots
 
@@ -134,6 +126,10 @@ Feel free to send us feedback on [Email](mailto:mohitfeuhrer@gmail.com) or [file
   <li>All Suggestions are welcome.</li>
   <li>Fork repository and Contribute.</li>
 </ul>
+
+## Announcements
+
+We have updated Jarvis Bot and it now uses latest python-zulip-api. Also now all the features of Jarvis bot can be used in both stream as well as private messages.
 
 ## Acknowledgment
 
