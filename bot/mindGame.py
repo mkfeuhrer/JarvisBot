@@ -28,10 +28,10 @@ def get_mindGame_response(message: Dict[str, str], bot_handler: Any) -> str:
 	original3 = "hgfe"
 	original4 = "dabc"
 	if words[2] == "start" :
-		dup1 = "****"
-		dup2 = "****"
-		dup3 = "****"
-		dup4 = "****"
+		dup1 = "####"
+		dup2 = "####"
+		dup3 = "####"
+		dup4 = "####"
 		bot_handler.storage.put("dup1", dup1 )
 		bot_handler.storage.put("dup2", dup2 )
 		bot_handler.storage.put("dup3", dup3 )
@@ -45,7 +45,7 @@ def get_mindGame_response(message: Dict[str, str], bot_handler: Any) -> str:
 		dup2 = bot_handler.storage.get("dup2")
 		dup3 = bot_handler.storage.get("dup3")
 		dup4 = bot_handler.storage.get("dup4")
-		x = int(words[2])
+		x = int(words[2]) + 1
 		y = int(words[3]) 
 		prevx = bot_handler.storage.get("prevx") ;
 		prevy = bot_handler.storage.get("prevy") ;
@@ -100,13 +100,13 @@ def get_mindGame_response(message: Dict[str, str], bot_handler: Any) -> str:
 				bot_handler.storage.put("prevx" , "5") 
 				bot_handler.storage.put("prevy" , "5")
 				if prevx == 1 :
-					dup1 = dup1[:prevy] + "*" + dup1[prevy+1:] 
+					dup1 = dup1[:prevy] + "#" + dup1[prevy+1:] 
 				elif prevx == 2 :
-					dup2 = dup2[:prevy] + "*" + dup2[prevy+1:] 
+					dup2 = dup2[:prevy] + "#" + dup2[prevy+1:] 
 				elif prevx == 3 :
-					dup3 = dup3[:prevy] + "*" + dup3[prevy+1:]
+					dup3 = dup3[:prevy] + "#" + dup3[prevy+1:]
 				else :
-					dup4 = dup4[:prevy] + "*" + dup4[prevy+1:]
+					dup4 = dup4[:prevy] + "#" + dup4[prevy+1:]
 		bot_handler.storage.put("dup1" , dup1 )
 		bot_handler.storage.put("dup2" , dup2 )
 		bot_handler.storage.put("dup3" , dup3 )
