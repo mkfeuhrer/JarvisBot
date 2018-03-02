@@ -18,7 +18,7 @@
 - [Contributors](#contributors)
 - [Contribute](#contribute)
 - [Announcements](#announcements)
-- [Acknowledgement](#acknowledgement)
+- [Acknowledgement](#acknowledgment)
 
 ## Introduction
 
@@ -81,67 +81,67 @@ Example Usage - ```zulip-run-bot ~/Projects/JarvisBot/bot/jarvisBot --config-fil
 
 <strong> Latest news :</strong> 
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/news.png" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/news.png">
 </p>
 
 <strong> Song Lyrics :</strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/lyrics.png" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/lyrics.png">
 </p>
 
 <strong> Popular Trending Movies :</strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/popularmovies.png" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/popularmovies.png">
 </p>
 
 <strong> Popular Trending Shows :</strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/popularshows.png" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/popularshows.png">
 </p>
 
 <strong> Movie Search : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/moviessearch.png" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/moviessearch.png">
 </p>
 
 <strong> TODO List : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/todo.png" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/todo.png">
 </p>
 
 <strong> Cricket Scores : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/cricket.png" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/cricket.png">
 </p>
 
 <strong> Currency Converter : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/currency.png" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/currency.png">
 </p>
 
 <strong> Dictionary : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/dictionary.png" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/dictionary.png">
 </p>
 
 <strong> Man Page Of Command : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/man.png" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/man.png">
 </p>
 
 <strong> NLP Based Output : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/nlp.png" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/nlp.png">
 </p>
 
 <strong> Calculator : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/calculator.png" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/calculator.png">
 </p>
 
 <strong> Hangman Game : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/hangman.png" width=550>
+  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/hangman.png">
 </p>
 
 ## Feedback
