@@ -10,15 +10,15 @@
 
 ## Table of Contents
 
-- [Introduction](#Introduction)
-- [Features](#Features)
-- [Deploy](#Deploy)
-- [Screenshots](#Screenshots)
-- [Feedback](#Feedback)
-- [Contributors](#Contributors)
-- [Contribute](#Contribute)
-- [Announcements](#Announcements)
-- [Acknowledgement](#Acknowledgement)
+- [Introduction](#introduction)
+- [Features](#features)
+- [Deploy](#deploy)
+- [Screenshots](#screenshots)
+- [Feedback](#feedback)
+- [Contributors](#contributors)
+- [Contribute](#contribute)
+- [Announcements](#announcements)
+- [Acknowledgement](#acknowledgement)
 
 ## Introduction
 
@@ -70,7 +70,7 @@ To deploy Jarvis bot using your local machine as server, follow following steps 
 * Make sure sure that your system has following packages installed -
 	* enchant (Please make sure your enchant version is <= 1.6.1-2) 
 	* sshpass (For debian based system install using ```sudo apt-get install sshpass```)
-	* aspell-en - (For debian based system install using ```sudo apt-get install aspell-en```)
+	* aspell-en (For debian based system install using ```sudo apt-get install aspell-en```)
 * Install all required python packages, rum command ```pip3 install -r requirements.txt```
 * Now we are all set, to run bot enter following command ```zulip-run-bot <absolute path to jarvisBot.py file > --config-file <absolute path to downloaded zuliprc file>```
 
