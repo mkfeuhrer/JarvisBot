@@ -27,6 +27,7 @@ class JarvisBot(object):
         data = message["content"].split()
         if(data[0] != "Jarvis"):
         	data.insert(0,"Jarvis")
+        	message["content"] = "Jarvis " + message["content"]
         if(len(data) >= 2):
             query = data[1]
 
