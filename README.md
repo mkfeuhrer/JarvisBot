@@ -1,7 +1,7 @@
 <h1 align="center"> Jarvis - Bot </h1> <br>
 <p align="center">
   <a href="https://github.com/mkfeuhrer/JarvisBot">
-    <img alt="Check on Zulip Chat" title="Jarvis-Bot" src="https://github.com/mkfeuhrer/JarvisBot/blob/master/images/JarvisBot.gif" width="550">
+    <img alt="Check on Zulip Chat" title="Jarvis-Bot" src="https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/images/JarvisBot.gif" width="550">
   </a>
 </p>
 <p align="center">
@@ -29,7 +29,7 @@
 Intelligent Bot lets you perform utility and fun stuff like games, Built with Python and ZulipChat-Api, Jarvis-Bot is the most feature-rich unofficial ZulipChat Bot that is 100% free.
 
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/images/Zulip.jpg" width=550>
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/images/Zulip.jpg" width=550>
 </p>
 
 ## Features
@@ -81,67 +81,67 @@ Example Usage - ```zulip-run-bot ~/Projects/JarvisBot/bot/jarvisBot --config-fil
 
 <strong> Latest news :</strong> 
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/news.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/screenshots/news.png">
 </p>
 
 <strong> Song Lyrics :</strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/lyrics.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/lyrics.png">
 </p>
 
 <strong> Popular Trending Movies :</strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/popularmovies.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/popularmovies.png">
 </p>
 
 <strong> Popular Trending Shows :</strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/popularshows.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/popularshows.png">
 </p>
 
 <strong> Movie Search : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/moviessearch.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/moviessearch.png">
 </p>
 
 <strong> TODO List : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/todo.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/todo.png">
 </p>
 
 <strong> Cricket Scores : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/cricket.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/cricket.png">
 </p>
 
 <strong> Currency Converter : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/currency.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/currency.png">
 </p>
 
 <strong> Dictionary : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/dictionary.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/dictionary.png">
 </p>
 
 <strong> Man Page Of Command : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/man.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/man.png">
 </p>
 
 <strong> NLP Based Output : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/nlp.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/nlp.png">
 </p>
 
 <strong> Calculator : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/calculator.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/calculator.png">
 </p>
 
 <strong> Hangman Game : </strong>
 <p align="center">
-  <img src = "https://github.com/mkfeuhrer/JarvisBot/blob/master/screenshots/hangman.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/hangman.png">
 </p>
 
 ## Feedback
