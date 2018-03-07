@@ -106,42 +106,42 @@ Example Usage - ```zulip-run-bot ~/Projects/JarvisBot/bot/jarvisBot --config-fil
 
 <strong> TODO List : </strong>
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/todo.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/screenshots/todo.png">
 </p>
 
 <strong> Cricket Scores : </strong>
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/cricket.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/screenshots/cricket.png">
 </p>
 
 <strong> Currency Converter : </strong>
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/currency.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/screenshots/currency.png">
 </p>
 
 <strong> Dictionary : </strong>
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/dictionary.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/screenshots/dictionary.png">
 </p>
 
 <strong> Man Page Of Command : </strong>
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/man.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/screenshots/man.png">
 </p>
 
 <strong> NLP Based Output : </strong>
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/nlp.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/screenshots/nlp.png">
 </p>
 
 <strong> Calculator : </strong>
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/calculator.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/screenshots/calculator.png">
 </p>
 
 <strong> Hangman Game : </strong>
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/hangman.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/screenshots/hangman.png">
 </p>
 
 ## Feedback
