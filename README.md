@@ -86,22 +86,22 @@ Example Usage - ```zulip-run-bot ~/Projects/JarvisBot/bot/jarvisBot --config-fil
 
 <strong> Song Lyrics :</strong>
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/lyrics.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/screenshots/lyrics.png">
 </p>
 
 <strong> Popular Trending Movies :</strong>
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/popularmovies.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/screenshots/popularmovies.png">
 </p>
 
 <strong> Popular Trending Shows :</strong>
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/popularshows.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/screenshots/popularshows.png">
 </p>
 
 <strong> Movie Search : </strong>
 <p align="center">
-  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/blob/master/screenshots/moviessearch.png">
+  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/screenshots/moviessearch.png">
 </p>
 
 <strong> TODO List : </strong>
