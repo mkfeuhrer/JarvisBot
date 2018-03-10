@@ -28,9 +28,7 @@
 
 Intelligent Bot lets you perform utility and fun stuff like games, Built with Python and ZulipChat-Api, Jarvis-Bot is the most feature-rich unofficial ZulipChat Bot that is 100% free.
 
-<p align="center">
-  <img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/images/Zulip.jpg" width=550>
-</p>
+<img src = "https://raw.githubusercontent.com/mkfeuhrer/JarvisBot/master/images/Zulip.jpg" width=550>
 
 ## Features
 
