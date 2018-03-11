@@ -146,7 +146,7 @@ Example Usage - ```zulip-run-bot ~/Projects/JarvisBot/bot/jarvisBot --config-fil
 
 ## Feedback
 
-Feel free to send us feedback on [Email](mailto:mohitfeuhrer@gmail.com) or [file an issue](https://github.com/mkfeuhrer/JarvisBot/issues).
+Feel free to send us feedback on [Email](mailto:support@jarvis-bot.tech) or [file an issue](https://github.com/mkfeuhrer/JarvisBot/issues).
 
 ## Contributors
 
