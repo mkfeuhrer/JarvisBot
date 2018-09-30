@@ -8,6 +8,11 @@
   Intelligently Interactive Bot. Built with Python and Zulip.
 </p>
 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/mkfeuhrer/JarvisBot)
+[![GitHub Stars](https://img.shields.io/github/stars/mkfeuhrer/JarvisBot.svg)](https://github.com/mkfeuhrer/JarvisBot) 
+[![Current Version](https://img.shields.io/badge/version-1.1-green.svg)](https://github.com/mkfeuhrer/JarvisBot)<br>
+
+
 ## Table of Contents
 
 - [Introduction](#introduction)
